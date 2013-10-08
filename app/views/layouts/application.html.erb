@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Aitfc</title>
+  <title>&#9825; Bio App - Health Tracker &#9825;</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -11,19 +12,20 @@
 <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="/"><span>Your Site Name</span></a>
+      <a class="brand" href="/"><span>Bio App - Health Tracker</span></a>
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         <% if user_signed_in? %>
             <span class="icon-bar">
+              <%= link_to 'Edit profile', edit_user_registration_path %>
               <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
             </span>
         <% else %>
             <span class="icon-bar">
-              <%= link_to "Sign In", new_user_session_path %>
+              <%= link_to "Sign Up", new_user_registration_path %>
             </span>
             <span class="icon-bar">
-              <%= link_to "Sign Up", new_user_registration_path %>
+              <%= link_to "Login", new_user_session_path %>
             </span>
         <% end %>
       </a>
