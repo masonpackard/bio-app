@@ -1,4 +1,4 @@
-<header class="navbar navbar-fixed-top navbar-inverse navbar-background">
+<header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
   <div class="navbar-inner"> 
     <div class="container">
 
@@ -13,11 +13,11 @@
       <div class="nav-collapse collapse">
         <ul class="nav pull-right">
         <% if user_signed_in? %>
-        <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
-        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
         <% else %>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <li><%= link_to "Login", new_user_session_path %></li>
+          <li><%= link_to "Login", "#login", "data-toggle" => "modal" %></li>
+          <li><%= link_to "Sign up", "#sign_up", "data-toggle" => "modal" %></li>
         <% end %>
       </div>
 
