@@ -1,6 +1,6 @@
 <h2>Sign up</h2>
-<div class="well row">
-	<div>
+<div class="row-fluid">
+	<div class="well span4">
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   		<%= devise_error_messages! %>
 
@@ -20,7 +20,7 @@
   		<% end %>
   	</div>
   	
-  	<div class="pull-right">
+  	<div class="span8">
 		<p class="lead"> The road to better health is easy.  With our health application, you are able to track your progress.  At the same time, your health care professional is able to provide helpful feedback along the way.</p>
 	</div>
 </div>

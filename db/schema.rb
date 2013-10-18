@@ -11,10 +11,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131003214630) do
+ActiveRecord::Schema.define(version: 20131018011435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "feedbacks", force: true do |t|
+    t.integer  "provider_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "goals", force: true do |t|
+    t.integer  "user_id"
+    t.text     "name"
+    t.text     "type"
+    t.integer  "metric"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "invitations", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "provider_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "measures", force: true do |t|
+    t.integer  "user_id"
+    t.datetime "measure_date"
+    t.float    "measure_distance"
+    t.float    "measure_calories"
+    t.float    "measure_elevation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "measure_raw"
+  end
+
+  create_table "notes", force: true do |t|
+    t.integer  "user_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "providers", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.boolean  "active"
+    t.text     "token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -29,6 +80,14 @@ ActiveRecord::Schema.define(version: 20131003214630) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "gender"
+    t.date     "birth_date"
+    t.text     "withings_id"
+    t.integer  "height_feet"
+    t.integer  "height_inches"
+    t.boolean  "send_email"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

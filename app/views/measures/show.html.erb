@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @measure.user_id %>
+</p>
+
+<p>
+  <strong>Measure date:</strong>
+  <%= @measure.measure_date %>
+</p>
+
+<p>
+  <strong>Measure distance:</strong>
+  <%= @measure.measure_distance %>
+</p>
+
+<p>
+  <strong>Measure calories:</strong>
+  <%= @measure.measure_calories %>
+</p>
+
+<p>
+  <strong>Measure elevation:</strong>
+  <%= @measure.measure_elevation %>
+</p>
+
+<%= link_to 'Edit', edit_measure_path(@measure) %> |
+<%= link_to 'Back', measures_path %>

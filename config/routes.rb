@@ -1,4 +1,16 @@
 BioApp::Application.routes.draw do
+  resources :feedbacks
+
+  resources :invitations
+
+  resources :goals
+
+  resources :notes
+
+  resources :measures
+
+  resources :providers
+
   root to: 'welcome#index'
   get "welcome/index"
   devise_for :users

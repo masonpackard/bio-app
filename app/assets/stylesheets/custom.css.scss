@@ -13,10 +13,18 @@ html {
 
 body {
   padding-top: 60px;
-  overflow: hidden;
+  overflow: auto;
+  background-image: image-url("bg_tan.png");
+}
+
+intro {
+  overflow: auto;
 }
 
 section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 2px solid #e9ebed;
   overflow: auto;
 }
 
