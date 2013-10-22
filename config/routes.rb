@@ -1,4 +1,5 @@
 BioApp::Application.routes.draw do
+
   resources :feedbacks
 
   resources :invitations
@@ -10,6 +11,11 @@ BioApp::Application.routes.draw do
   resources :measures
 
   resources :providers
+
+  resources :authentications
+
+  match 'auth/:provider/callback', to: 'authentications#create', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
 
   root to: 'welcome#index'
   get "welcome/index"

@@ -50,6 +50,10 @@ gem "foreman"
 gem "devise"
 gem "bootstrap-sass"
 gem "font-awesome-rails"
+gem "omniauth"
+gem 'omniauth-facebook', '1.4.0'
+gem "koala", "~> 1.7.0rc1"
+
 group :development, :test do
   gem "rspec-rails", "2.13.0"
   gem "pry"

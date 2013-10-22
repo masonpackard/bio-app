@@ -22,11 +22,13 @@ intro {
 }
 
 section {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-top: 2px solid #e9ebed;
   overflow: auto;
 }
+
+#new-you img{ float: right;}
 
 textarea {
   resize: vertical;
