@@ -53,6 +53,8 @@ gem "font-awesome-rails"
 gem "omniauth"
 gem 'omniauth-facebook', '1.4.0'
 gem "koala", "~> 1.7.0rc1"
+gem 'omniauth-twitter'
+gem 'twitter'
 
 group :development, :test do
   gem "rspec-rails", "2.13.0"
@@ -71,4 +73,5 @@ group :test do
   gem "forgery"
   gem "launchy"
   gem "capybara-email"
+  gem "database_cleaner"
 end

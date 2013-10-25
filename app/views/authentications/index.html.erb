@@ -21,12 +21,13 @@
   <p><strong>Sign in through one of these services:</strong></p>
 <% end %>
 
-<!--
-<a href="/auth/twitter" class="auth_provider">
+<% unless @authentications.select{ |a| a.provider == "facebook" }.any? %>
+<a href="/auth/twitter" id="attach-twitter">
   <%= image_tag "twitter_64.png", :size => "64x64", :alt => "Twitter" %>
   Twitter
 </a>
--->
+<% end %>
+
 <% unless @authentications.select{ |a| a.provider == "facebook" }.any? %>
   <%= link_to_function image_tag("facebook_64.png", :size => "64x64", :alt => "Facebook"), 'fblogin()' %>
 <% end %>
