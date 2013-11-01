@@ -9,4 +9,8 @@ has_many :authentications
  def twitter_client
     authentications.where(provider: "twitter").first.twitter_client
  end
+
+ def withings_client
+    authentications.where(provider: "withings").first.withings_client
+ end
 end
