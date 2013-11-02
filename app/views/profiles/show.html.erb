@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @profile.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @profile.last_name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @profile.gender %>
+</p>
+
+<p>
+  <strong>Birth Date:</strong>
+  <%= @profile.birth_date.strftime("%B %d, %Y, which was a %A.") %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @profile.height_feet %> feet, <%= @profile.height_inches %> inches 
+</p>
+
+<p>
+  <strong>Withings ID:</strong>
+  <%= @profile.withings_id %>
+</p>
+
+<p>
+  <strong>Withings API key:</strong>
+  <%= @profile.withings_api_key %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', root_path %>

@@ -1,0 +1,6 @@
+<h2>Editing profile for <%= current_user.email %></h2>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @profile %> |
+<%= link_to 'Cancel', profile_path(@profile) %>

@@ -1,0 +1,59 @@
+<%= form_for(@profile) do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.select :gender, gender: [:male, :female] %>
+  </div>
+  <div class="field">
+    <%= f.label :birth_date %>
+    <%= f.date_select :birth_date, :end_year => Date.current.year - 13, :start_year => 1932, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }, :order => [:month, :day, :year] %>
+  </div>
+  <div class="field">
+    <%= f.label "Your Height" %>
+    <%= f.number_field :height_feet, :placeholder => "Height in Feet"%>
+    <%= f.number_field :height_inches, :placeholder => "Height in Inches" %>
+  </div>
+  <div class="field">
+    <%= f.label "Withings Device Id" %>
+    <%= f.text_field :withings_id, :placeholder => "User Id from Withings" %>
+  </div>
+ <div class="field">
+    <%= f.label "Withings API Key" %>
+    <%= f.text_field :withings_api_key, :placeholder => "Public Key from Withings" %>
+  </div>
+  <div class="well">
+    <h2>Info on granting Withings access:</h2>
+    <ol>
+      <li>Login to the withings website: <a href="https://auth.withings.com/">Link to Withings Login</a></li>
+      <li>Click the <i>Use Former Interface</i> in the upper right corner</li>
+      <li>Click the <i>Share</i> button in the top center of page</li>
+      <li>Click on <i>Share on my website</i></li>
+      <li>Your information is listed in a table on the right.  You will need to write the following information down: <i>User Id</i> and <i>Public Key</i></li>
+      <li>Enter the information in the corresponding two fields above.</li>
+    </ol>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

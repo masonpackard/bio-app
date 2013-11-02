@@ -1,5 +1,7 @@
 BioApp::Application.routes.draw do
 
+  resources :profiles
+
   resources :feedbacks
 
   resources :invitations
@@ -9,8 +11,6 @@ BioApp::Application.routes.draw do
   resources :notes
 
   resources :measures
-
-  resources :providers
 
   resources :authentications
 

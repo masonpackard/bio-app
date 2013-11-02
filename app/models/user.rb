@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 has_many :authentications
+has_one :profiles
 
  def twitter_client
     authentications.where(provider: "twitter").first.twitter_client
