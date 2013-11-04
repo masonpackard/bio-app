@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 has_many :authentications
-has_one :profiles
+has_one :profile
+ accepts_nested_attributes_for :profile
 
  def twitter_client
     authentications.where(provider: "twitter").first.twitter_client

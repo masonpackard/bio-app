@@ -5,6 +5,7 @@ class ProfilesController < ApplicationController
   # GET /profiles.json
   def index
     #@profiles = Profile.all
+    #redirect_to root_path
   end
 
   # GET /profiles/1
@@ -25,6 +26,7 @@ class ProfilesController < ApplicationController
   # POST /profiles
   # POST /profiles.json
   def create
+
     @profile = Profile.new(profile_params)
 
     respond_to do |format|
@@ -58,7 +60,7 @@ class ProfilesController < ApplicationController
   def destroy
     @profile.destroy
     respond_to do |format|
-      format.html { redirect_to profiles_url }
+      format.html { redirect_to root_path }
       format.json { head :no_content }
     end
   end
