@@ -20,6 +20,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+    #@profile = current_user.profile
     @profile = Profile.find(@profile)
   end
 
@@ -68,7 +69,7 @@ class ProfilesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
-      @profile = Profile.find(current_user)
+      @profile = Profile.where(user_id: current_user.id).first
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

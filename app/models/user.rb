@@ -4,9 +4,15 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-has_many :authentications
-has_one :profile
- accepts_nested_attributes_for :profile
+ has_many :authentications
+ has_one :profile, dependent: :destroy
+  accepts_nested_attributes_for :profile
+
+ before_create :create_profile
+
+ def create_profile
+	self.profile = Profile.new(:user_id => self.id) unless self.profile
+ end
 
  def twitter_client
     authentications.where(provider: "twitter").first.twitter_client

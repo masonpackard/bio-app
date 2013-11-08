@@ -71,12 +71,12 @@ ActiveRecord::Schema.define(version: 20131102190111) do
 
   create_table "profiles", force: true do |t|
     t.integer  "user_id"
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "first_name",       default: "",           null: false
+    t.string   "last_name",        default: "",           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "gender"
-    t.date     "birth_date"
+    t.date     "birth_date",       default: '1923-01-01'
     t.text     "withings_id"
     t.text     "withings_api_key"
     t.integer  "height_feet"

@@ -28,6 +28,35 @@ section {
   overflow: auto;
 }
 
+.bounce, .pulse, .floating, .tossing, .pullUp, .pullDown, .stretchLeft, .stretchRight{
+  visibility: visible !important; 
+}
+
+#oldyou #busted{
+  visibility: hidden;
+}
+
+#pro #busted2{
+  visibility: hidden;
+}
+
+#insight #hatch1{
+  visibility: hidden;
+}
+
+#insight #hatch2{
+  visibility: hidden;
+}
+
+#insight #hatch3{
+  visibility: hidden;
+}
+
+#new-you #newyou {
+    height: 85%;
+    width: 85%;
+}
+
 #new-you img{ float: right;}
 
 textarea {
@@ -46,7 +75,6 @@ textarea {
 .navbar-background {
   opacity: 0.95;
 }
-
 
 /* typography */
 
