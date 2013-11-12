@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
  before_create :create_profile
 
  def create_profile
-	self.profile = Profile.new(:user_id => self.id) unless self.profile
+	self.profile = Profile.new(:user_id => self.id)
  end
 
  def twitter_client
