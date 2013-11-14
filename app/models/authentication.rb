@@ -8,6 +8,11 @@ belongs_to :user
      )
   end
 
+  def withings_user
+      #withings_user = Withings::User.authenticate(self.uid, self.oauth_token, self.oauth_token_secret)
+      withings_user = Withings::User.authenticate(self.uid, self.oauth_token, self.oauth_token_secret)
+  end
+
   def self.from_omniauth(user, auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |authentication|
       authentication.user = user

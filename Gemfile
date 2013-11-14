@@ -55,6 +55,8 @@ gem 'omniauth-facebook', '1.4.0'
 gem "koala", "~> 1.7.0rc1"
 gem 'omniauth-twitter'
 gem 'twitter'
+gem "omniauth-withings"
+gem "simplificator-withings"
 
 group :development, :test do
   gem "rspec-rails", "2.13.0"

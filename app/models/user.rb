@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
  has_many :authentications
+ has_many :notes, dependent: :destroy
+  accepts_nested_attributes_for :notes
  has_one :profile, dependent: :destroy
   accepts_nested_attributes_for :profile
 

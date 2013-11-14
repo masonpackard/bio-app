@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>User:</strong>
-  <%= @note.user_id %>
+<%= current_user.profile.first_name %> <%= current_user.profile.last_name %>
 </p>
 
 <p>

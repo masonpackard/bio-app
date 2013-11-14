@@ -6,6 +6,7 @@ class CreateMeasures < ActiveRecord::Migration
       t.float :measure_distance
       t.float :measure_calories
       t.float :measure_elevation
+      t.text  :measure_raw
 
       t.timestamps
     end

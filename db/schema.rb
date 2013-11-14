@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131102190111) do
+ActiveRecord::Schema.define(version: 20131102163945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20131102190111) do
     t.string   "name"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.string   "oauth_token_secret"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "oauth_token_secret"
   end
 
   create_table "feedbacks", force: true do |t|
@@ -57,9 +57,9 @@ ActiveRecord::Schema.define(version: 20131102190111) do
     t.float    "measure_distance"
     t.float    "measure_calories"
     t.float    "measure_elevation"
+    t.text     "measure_raw"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "measure_raw"
   end
 
   create_table "notes", force: true do |t|
@@ -73,14 +73,14 @@ ActiveRecord::Schema.define(version: 20131102190111) do
     t.integer  "user_id"
     t.string   "first_name",       default: "",           null: false
     t.string   "last_name",        default: "",           null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "gender"
     t.date     "birth_date",       default: '1923-01-01'
     t.text     "withings_id"
     t.text     "withings_api_key"
     t.integer  "height_feet"
     t.integer  "height_inches"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
@@ -96,14 +96,6 @@ ActiveRecord::Schema.define(version: 20131102190111) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "gender"
-    t.date     "birth_date"
-    t.text     "withings_id"
-    t.integer  "height_feet"
-    t.integer  "height_inches"
-    t.boolean  "send_email"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
