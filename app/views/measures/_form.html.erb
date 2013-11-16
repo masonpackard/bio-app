@@ -12,10 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
     <%= f.label :measure_date %><br>
     <%= f.datetime_select :measure_date %>
   </div>
@@ -24,12 +20,12 @@
     <%= f.text_field :measure_distance %>
   </div>
   <div class="field">
-    <%= f.label :measure_calories %><br>
-    <%= f.text_field :measure_calories %>
-  </div>
-  <div class="field">
     <%= f.label :measure_elevation %><br>
     <%= f.text_field :measure_elevation %>
+  </div>
+  <div class="field">
+    <%= f.label :measure_calories %><br>
+    <%= f.text_field :measure_calories %>
   </div>
   <div class="actions">
     <%= f.submit %>

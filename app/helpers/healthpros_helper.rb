@@ -1,0 +1,2 @@
+module HealthprosHelper
+end

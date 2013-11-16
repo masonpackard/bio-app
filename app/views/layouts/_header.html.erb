@@ -12,6 +12,7 @@
         <ul class="nav pull-right">
         <% if user_signed_in? %>
           <li><%= link_to "Notes", notes_path %></li>
+          <li><%= link_to "Activity", measures_path %></li>
           <li><%= link_to "Social Accounts", authentications_path %></li>
           <li><%= link_to "Profile", edit_profile_path(current_user.profile) %></li>
           <li><%= link_to 'Edit Account', edit_user_registration_path %></li>

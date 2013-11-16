@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Provider</th>
+      <th>Healthpro</th>
       <th>Body</th>
       <th></th>
       <th></th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @feedbacks.each do |feedback| %>
       <tr>
-        <td><%= feedback.provider_id %></td>
+        <td><%= feedback.healthpro_id %></td>
         <td><%= feedback.body %></td>
         <td><%= link_to 'Show', feedback %></td>
         <td><%= link_to 'Edit', edit_feedback_path(feedback) %></td>

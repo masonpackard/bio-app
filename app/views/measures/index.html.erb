@@ -1,32 +1,19 @@
-<h1>Listing measures</h1>
+<h2>Activity Measurements for <%= current_user.email %> | <%= current_user.profile.first_name %> <%= current_user.profile.last_name %></h2>
 
-<table>
+<table class="table table-striped table-responsive col-md-12">
   <thead>
     <tr>
-      <th>User</th>
-      <th>Measure date</th>
-      <th>Measure distance</th>
-      <th>Measure calories</th>
-      <th>Measure elevation</th>
-      <th></th>
+      <th>Created</th>
+      <th>Distance in Steps</th>
+      <th>Calories burned</th>
+      <th>Elevation</th>
       <th></th>
       <th></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @measures.each do |measure| %>
-      <tr>
-        <td><%= measure.user_id %></td>
-        <td><%= measure.measure_date %></td>
-        <td><%= measure.measure_distance %></td>
-        <td><%= measure.measure_calories %></td>
-        <td><%= measure.measure_elevation %></td>
-        <td><%= link_to 'Show', measure %></td>
-        <td><%= link_to 'Edit', edit_measure_path(measure) %></td>
-        <td><%= link_to 'Destroy', measure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <%= render partial: 'measure_row', collection: @measures.reverse %>
   </tbody>
 </table>
 

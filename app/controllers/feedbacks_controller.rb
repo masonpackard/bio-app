@@ -14,7 +14,7 @@ class FeedbacksController < ApplicationController
 
   # GET /feedbacks/new
   def new
-    @feedback = Feedback.new
+    @healthpro = Healthpro.new(:healthpro_id => self.id)
   end
 
   # GET /feedbacks/1/edit

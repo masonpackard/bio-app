@@ -1,5 +1,7 @@
 BioApp::Application.routes.draw do
 
+  resources :healthpros
+
   resources :profiles
 
   resources :feedbacks

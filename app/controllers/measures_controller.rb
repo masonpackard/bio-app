@@ -1,10 +1,11 @@
 class MeasuresController < ApplicationController
   before_action :set_measure, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /measures
   # GET /measures.json
   def index
-    @measures = Measure.all
+    @measures = current_user.measures
   end
 
   # GET /measures/1
@@ -19,17 +20,19 @@ class MeasuresController < ApplicationController
 
   # GET /measures/1/edit
   def edit
+    @measure = Measure.find(@measure)
   end
 
   # POST /measures
   # POST /measures.json
   def create
     @measure = Measure.new(measure_params)
+    @measure.user = current_user
 
     respond_to do |format|
       if @measure.save
-        format.html { redirect_to @measure, notice: 'Measure was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @measure }
+        format.html { redirect_to measures_path, notice: 'Measure was successfully created.' }
+        format.json { render action: 'show', status: :created, location: measures_path }
       else
         format.html { render action: 'new' }
         format.json { render json: @measure.errors, status: :unprocessable_entity }
@@ -42,7 +45,7 @@ class MeasuresController < ApplicationController
   def update
     respond_to do |format|
       if @measure.update(measure_params)
-        format.html { redirect_to @measure, notice: 'Measure was successfully updated.' }
+        format.html { redirect_to measures_path, notice: 'Measure was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

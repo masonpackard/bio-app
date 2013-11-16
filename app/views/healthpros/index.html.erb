@@ -1,0 +1,33 @@
+<h1>Listing healthpros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @healthpros.each do |healthpro| %>
+      <tr>
+        <td><%= healthpro.user_id %></td>
+        <td><%= healthpro.first_name %></td>
+        <td><%= healthpro.last_name %></td>
+        <td><%= healthpro.title %></td>
+        <td><%= link_to 'Show', healthpro %></td>
+        <td><%= link_to 'Edit', edit_healthpro_path(healthpro) %></td>
+        <td><%= link_to 'Destroy', healthpro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Healthpro', new_healthpro_path %>

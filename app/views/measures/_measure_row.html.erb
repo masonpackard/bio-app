@@ -1,0 +1,8 @@
+<tr>
+	<td><%= measure_row.created_at.strftime("%m-%e-%y at %l:%M %P") %></td>
+	<td><%= measure_row.measure_distance %></td>
+	<td><%= measure_row.measure_calories %></td>
+	<td><%= measure_row.measure_elevation %></td>
+	<td><%= link_to 'Edit', edit_measure_path(measure_row) %></td>
+	<td><%= link_to 'Destroy', measure_row, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

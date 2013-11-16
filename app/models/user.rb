@@ -6,9 +6,12 @@ class User < ActiveRecord::Base
 
  has_many :authentications
  has_many :notes, dependent: :destroy
+ has_many :measures, dependent: :destroy
   accepts_nested_attributes_for :notes
  has_one :profile, dependent: :destroy
-  accepts_nested_attributes_for :profile
+  accepts_nested_attributes_for :profile 
+ has_one :healthpro, dependent: :destroy
+  accepts_nested_attributes_for :healthpro 
 
  before_create :create_profile
 
