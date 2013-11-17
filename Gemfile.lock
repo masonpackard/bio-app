@@ -95,6 +95,7 @@ GEM
     guard-rspec (3.1.0)
       guard (>= 1.8)
       rspec (~> 2.13)
+    hash-deep-merge (0.1.1)
     hashie (2.0.5)
     hike (1.2.3)
     httparty (0.12.0)
@@ -118,6 +119,9 @@ GEM
       multi_json
     launchy (2.3.0)
       addressable (~> 2.3)
+    lazy_high_charts (1.4.3)
+      bundler (>= 1.0)
+      hash-deep-merge
     listen (1.3.1)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -284,6 +288,7 @@ DEPENDENCIES
   jquery-rails
   koala (~> 1.7.0rc1)
   launchy
+  lazy_high_charts
   omniauth
   omniauth-facebook (= 1.4.0)
   omniauth-twitter

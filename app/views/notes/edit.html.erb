@@ -1,4 +1,4 @@
-<h1>Editing note</h1>
+<h2>Editing Note<br> Created at <%= @note.created_at.strftime("%m-%e-%y at %l:%M %P") %> | Edited at <%= @note.updated_at.strftime("%m-%e-%y at %l:%M %P") %>.</h2>
 
 <%= render 'form' %>
 

@@ -10,38 +10,48 @@
       </ul>
     </div>
   <% end %>
+<div class="container">
+    <div class="span4">
+      <div class="field">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+      </div>
+      <div class="field">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+      </div>
+       <div class="field">
+        <%= f.label :gender %>
+        <%= f.select :gender, gender: [:male, :female] %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :gender %>
-    <%= f.select :gender, gender: [:male, :female] %>
-  </div>
-  <div class="field">
-    <%= f.label :birth_date %>
-    <%= f.date_select :birth_date, :end_year => Date.current.year - 13, :start_year => 1932, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }, :order => [:month, :day, :year] %>
-  </div>
-  <div class="field">
-    <%= f.label "Your Height" %>
-    <%= f.number_field :height_feet, :placeholder => "Height in Feet"%>
-    <%= f.number_field :height_inches, :placeholder => "Height in Inches" %>
-  </div>
-  <div class="field">
-    <%= f.label "Withings User Id" %>
-    <%= f.text_field :withings_id, :placeholder => "User Id from Withings" %>
-  </div>
- <div class="field">
-    <%= f.label "Withings API Key" %>
-    <%= f.text_field :withings_api_key, :placeholder => "Public Key from Withings" %>
-  </div>
+    <div class="span4">
+      <div class="field">
+        <%= f.label :birth_date %>
+        <%= f.date_select :birth_date, :end_year => Date.current.year - 13, :start_year => 1932, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }, :order => [:month, :day, :year] %>
+      </div>
+      <div class="field">
+        <%= f.label "Your Height" %>
+        <%= f.number_field :height_feet, :placeholder => "ft"%> feet&nbsp;
+        <%= f.number_field :height_inches, :placeholder => "in" %> inches&nbsp;
+      </div>
+    </div>
+
+    <div class="span2">
+      <div class="field">
+        <%= f.label "Withings User Id" %>
+        <%= f.text_field :withings_id, :placeholder => "User Id from Withings" %>
+      </div>
+      <div class="field">
+        <%= f.label "Withings API Key" %>
+        <%= f.text_field :withings_api_key, :placeholder => "Public Key from Withings" %>
+      </div>
+    </div>
+</div>
+
   <div class="well">
-    <h2>Info on granting Withings access:</h2>
+    <h2><em>Future Feature --- </em>Info on granting Withings access:</h2>
     <ol>
       <li>Login to the withings website: <a href="https://auth.withings.com/" target="new"><strong>Link to Withings Login</strong></a></li>
       <li>Click the <i>Use Former Interface</i> in the upper right corner</li>
@@ -52,8 +62,7 @@
     </ol>
   </div>
 
-
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary btn-small" %>
   </div>
 <% end %>

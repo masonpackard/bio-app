@@ -1,5 +1,9 @@
 <h2>Notes for <%= current_user.email %> | <%= current_user.profile.first_name %> <%= current_user.profile.last_name %></h2>
 
+<div class="pull-right">
+<%= link_to 'New Note', new_note_path, class: 'btn btn-primary btn-small' %>
+</div>
+
 <table class="table table-striped table-responsive col-md-8">
   <thead>
     <tr>
@@ -16,5 +20,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Note', new_note_path, class: 'btn btn-primary' %>

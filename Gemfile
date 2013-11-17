@@ -55,6 +55,7 @@ gem 'omniauth-facebook', '1.4.0'
 gem "koala", "~> 1.7.0rc1"
 gem 'omniauth-twitter'
 gem 'twitter'
+gem 'lazy_high_charts'
 gem "omniauth-withings"
 gem "simplificator-withings"
 

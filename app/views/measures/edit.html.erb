@@ -1,6 +1,5 @@
-<h1>Editing measure</h1>
+<h2>Editing Measurement<br> Created at <%= @measure.created_at.strftime("%m-%e-%y at %l:%M %P") %> | Edited at <%= @measure.updated_at.strftime("%m-%e-%y at %l:%M %P") %>.</h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @measure %> |
-<%= link_to 'Back', measures_path %>
+<%= link_to 'Cancel', measures_path %>

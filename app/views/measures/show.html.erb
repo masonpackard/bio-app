@@ -11,6 +11,16 @@
 </p>
 
 <p>
+  <strong>Measure steps:</strong>
+  <%= @measure.measure_steps %>
+</p>
+
+<p>
+  <strong>Measure elevation:</strong>
+  <%= @measure.measure_elevation %>
+</p>
+
+<p>
   <strong>Measure distance:</strong>
   <%= @measure.measure_distance %>
 </p>
@@ -20,10 +30,4 @@
   <%= @measure.measure_calories %>
 </p>
 
-<p>
-  <strong>Measure elevation:</strong>
-  <%= @measure.measure_elevation %>
-</p>
-
-<%= link_to 'Edit', edit_measure_path(@measure) %> |
 <%= link_to 'Back', measures_path %>

@@ -10,24 +10,28 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :measure_date %><br>
-    <%= f.datetime_select :measure_date %>
+   <div class="field">
+    <%= f.label :measure_steps %>
+    <%= f.text_field :measure_steps %>
   </div>
   <div class="field">
-    <%= f.label :measure_distance %><br>
-    <%= f.text_field :measure_distance %>
-  </div>
-  <div class="field">
-    <%= f.label :measure_elevation %><br>
+    <%= f.label :measure_elevation %>
     <%= f.text_field :measure_elevation %>
   </div>
   <div class="field">
-    <%= f.label :measure_calories %><br>
+    <%= f.label :measure_distance %>
+    <%= f.text_field :measure_distance %>
+  </div>
+  <div class="field">
+    <%= f.label :measure_calories %>
     <%= f.text_field :measure_calories %>
   </div>
+  <div class="field">
+    <%= f.label :measure_bpm %>
+    <%= f.text_field :measure_bpm %>
+  </div>
+  
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary btn-small"%>
   </div>
 <% end %>

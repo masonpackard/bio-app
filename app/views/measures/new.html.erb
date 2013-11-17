@@ -1,5 +1,5 @@
-<h1>New measure</h1>
+<h2>New Measurement for <%= current_user.email %> | <%= current_user.profile.first_name %> <%= current_user.profile.last_name %></h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', measures_path %>
+<%= link_to 'Cancel', measures_path %>

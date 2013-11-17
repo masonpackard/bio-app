@@ -5,6 +5,7 @@ class CreateHealthpros < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :title
+      t.string :organization
 
       t.timestamps
     end

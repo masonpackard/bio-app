@@ -1,8 +1,8 @@
 <tr>
-	<td><%= measure_row.created_at.strftime("%m-%e-%y at %l:%M %P") %></td>
-	<td><%= measure_row.measure_distance %></td>
-	<td><%= measure_row.measure_calories %></td>
-	<td><%= measure_row.measure_elevation %></td>
-	<td><%= link_to 'Edit', edit_measure_path(measure_row) %></td>
-	<td><%= link_to 'Destroy', measure_row, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<td><%= measure_row.measure_date.strftime("%m-%e-%y at %l:%M %P") %></td>
+	<td><%= number_with_precision(measure_row.measure_steps, precision: 0, delimiter: ',') %></td>
+	<td><%= number_with_precision(measure_row.measure_elevation, precision: 0) %></td>
+	<td><%= number_with_precision(measure_row.measure_distance, precision: 2) %></td>
+	<td><%= number_with_precision(measure_row.measure_calories, precision: 0) %></td>
+	<td><%= number_with_precision(measure_row.measure_bpm, precision: 0) %></td>
 </tr>

@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20131115202348) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "title"
+    t.string   "organization"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -63,9 +64,11 @@ ActiveRecord::Schema.define(version: 20131115202348) do
   create_table "measures", force: true do |t|
     t.integer  "user_id"
     t.datetime "measure_date"
+    t.float    "measure_steps"
     t.float    "measure_distance"
     t.float    "measure_calories"
     t.float    "measure_elevation"
+    t.float    "measure_bpm"
     t.text     "measure_raw"
     t.datetime "created_at"
     t.datetime "updated_at"

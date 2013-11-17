@@ -72,6 +72,6 @@ class MeasuresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def measure_params
-      params.require(:measure).permit(:user_id, :measure_date, :measure_distance, :measure_calories, :measure_elevation)
+      params.require(:measure).permit(:user_id, :measure_date, :measure_steps,  :measure_elevation, :measure_distance, :measure_calories, :measure_bpm)
     end
 end

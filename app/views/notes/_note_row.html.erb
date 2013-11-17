@@ -1,6 +1,6 @@
 <tr>
   <td><%= note_row.created_at.strftime("%m-%e-%y at %l:%M %P") %></td>
   <td><%= note_row.updated_at.strftime("%m-%e-%y at %l:%M %P") %></td>
-  <td><%= note_row.body %></td>
+  <td><%= note_row.body.html_safe %></td>
   <td><%= link_to 'Edit', edit_note_path(note_row) %></td>
 </tr>
