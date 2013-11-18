@@ -1,5 +1,5 @@
 <tr>
-	<td><%= measure_row.measure_date.strftime("%m-%e-%y at %l:%M %P") %></td>
+	<td><%= measure_row.created_at.strftime("%m-%e-%y at %l:%M %P") %></td>
 	<td><%= number_with_precision(measure_row.measure_steps, precision: 0, delimiter: ',') %></td>
 	<td><%= number_with_precision(measure_row.measure_elevation, precision: 0) %></td>
 	<td><%= number_with_precision(measure_row.measure_distance, precision: 2) %></td>

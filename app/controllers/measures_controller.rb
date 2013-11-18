@@ -5,7 +5,7 @@ class MeasuresController < ApplicationController
   # GET /measures
   # GET /measures.json
   def index
-    @measures = current_user.measures
+    @measures = current_user.measures.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /measures/1

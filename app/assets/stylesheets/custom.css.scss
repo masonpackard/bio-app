@@ -28,6 +28,10 @@ section {
   overflow: auto;
 }
 
+.pagination {
+  margin: 0px 0; 
+}
+
 .bounce, .pulse, .floating, .tossing, .pullUp, .pullDown, .stretchLeft, .stretchRight{
   visibility: visible !important; 
 }

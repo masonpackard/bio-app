@@ -15,8 +15,15 @@
   </thead>
 
   <tbody>
-    <%= render partial: 'note_row', collection: @notes.reverse %>
+    <%= render partial: 'note_row', collection: @notes.order('updated_at DESC') %>
   </tbody>
 </table>
 
-<br>
+<div class="container">
+  <div class="pull-left">
+  <%= page_entries_info @notes %>
+  </div>
+  <div class="pull-right">
+  <%= will_paginate @notes %>
+  </div>
+</div>

@@ -56,6 +56,8 @@ gem "koala", "~> 1.7.0rc1"
 gem 'omniauth-twitter'
 gem 'twitter'
 gem 'lazy_high_charts'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 gem "omniauth-withings"
 gem "simplificator-withings"
 
