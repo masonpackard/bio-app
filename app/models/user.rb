@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
  has_many :authentications
@@ -14,6 +14,9 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :healthpro 
 
  before_create :create_profile
+
+  include Gravtastic
+  is_gravtastic!
 
  def create_profile
 	self.profile = Profile.new(:user_id => self.id)

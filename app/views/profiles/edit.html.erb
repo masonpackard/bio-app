@@ -1,4 +1,4 @@
-<h2>Editing profile for <%= current_user.email %></h2>
+<h2><%= image_tag @current_user.gravatar_url(size: 120), class: "img-circle" %> Editing profile for <%= current_user.email %></h2>
 
 <%= render 'form' %>
 

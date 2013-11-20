@@ -48,6 +48,7 @@ gem "pg"
 gem "unicorn"
 gem "foreman"
 gem "devise"
+gem "devise_invitable"
 gem "bootstrap-sass"
 gem "font-awesome-rails"
 gem "omniauth"
@@ -58,6 +59,7 @@ gem 'twitter'
 gem 'lazy_high_charts'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'gravtastic'
 gem "omniauth-withings"
 gem "simplificator-withings"
 

@@ -1,6 +1,6 @@
-<h2>Activity Measurements for <%= current_user.email %> | <%= current_user.profile.first_name %> <%= current_user.profile.last_name %></h2>
+<h2><%= image_tag @current_user.gravatar_url(size: 60), class: "img-circle" %> Activity Measurements for <%= current_user.email %> | <%= current_user.profile.first_name %> <%= current_user.profile.last_name %></h2>
 
-<div id="activity_chart" style="width: 100%; height: 300px;"></div>
+<div id="activity_chart"></div>
 
 <hr>
 <div class="pull-right">

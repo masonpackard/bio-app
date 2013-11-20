@@ -1,4 +1,4 @@
-<h2>Notes for <%= current_user.email %> | <%= current_user.profile.first_name %> <%= current_user.profile.last_name %></h2>
+<h2><%= image_tag @current_user.gravatar_url(size: 60), class: "img-circle" %> Notes for <%= current_user.email %> | <%= current_user.profile.first_name %> <%= current_user.profile.last_name %></h2>
 
 <div class="pull-right">
 <%= link_to 'New Note', new_note_path, class: 'btn btn-primary btn-small' %>
