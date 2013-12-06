@@ -4,7 +4,8 @@ bio-app
 Healthcare Application for integration of a withings activity tracker.
 
 This application allows a withings device owner to view detailed statistics.  It also allows for the device owner to invite their health care professional.
-
+ 
+http://bio-app-1113.herokuapp.com/
 
 Purpose
 =======
