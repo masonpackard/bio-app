@@ -10,45 +10,70 @@
       </ul>
     </div>
   <% end %>
-<div class="container">
-    <div class="span4">
-      <div class="field">
-        <%= f.label :first_name %>
-        <%= f.text_field :first_name %>
+  <div class="container">
+    <div class="row">
+      <h4>Your Information:</h4>
+      <div class="span4">
+        <div class="field">
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name %>
+        </div>
+        <div class="field">
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name %>
+        </div>
+        <div class="field">
+          <%= f.label :gender %>
+          <%= f.select :gender, gender: [:male, :female] %>
+        </div>
       </div>
-      <div class="field">
-        <%= f.label :last_name %>
-        <%= f.text_field :last_name %>
+
+      <div class="span4">
+        <div class="field">
+          <%= f.label :birth_date %>
+          <%= f.date_select :birth_date, :end_year => Date.current.year - 13, :start_year => 1932, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }, :order => [:month, :day, :year] %>
+        </div>
+        <div class="field">
+          <%= f.label "Your Height" %>
+          <%= f.number_field :height_feet, :placeholder => "ft"%> feet&nbsp;
+          <%= f.number_field :height_inches, :placeholder => "in" %> inches&nbsp;
+        </div>
       </div>
-       <div class="field">
-        <%= f.label :gender %>
-        <%= f.select :gender, gender: [:male, :female] %>
+
+      <div class="span2">
+        <div class="field">
+          <%= f.label "Withings User Id" %>
+          <%= f.text_field :withings_id, :placeholder => "User Id from Withings" %>
+        </div>
+        <div class="field">
+          <%= f.label "Withings API Key" %>
+          <%= f.text_field :withings_api_key, :placeholder => "Public Key from Withings" %>
+        </div>
       </div>
     </div>
 
-    <div class="span4">
-      <div class="field">
-        <%= f.label :birth_date %>
-        <%= f.date_select :birth_date, :end_year => Date.current.year - 13, :start_year => 1932, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }, :order => [:month, :day, :year] %>
+    <div class="row">
+      <h4>Health Professional Information:</h4>
+      <div class="span4">
+        <div class="field">
+          <%= f.label "First Name" %>
+          <%= f.text_field :withings_id, :placeholder => "Your Professional's 1st name" %>
+          <%= f.label "Last Name" %>
+          <%= f.text_field :withings_id, :placeholder => "Your Professional's last name" %>
+          <%= f.label "Title" %>
+          <%= f.text_field :withings_id, :placeholder => "Title" %>
+        </div>
       </div>
-      <div class="field">
-        <%= f.label "Your Height" %>
-        <%= f.number_field :height_feet, :placeholder => "ft"%> feet&nbsp;
-        <%= f.number_field :height_inches, :placeholder => "in" %> inches&nbsp;
+      <div class="span4">
+        <div class="field">
+          <%= f.label "Organization" %>
+          <%= f.text_field :withings_id, :placeholder => "Your Professional's Organization" %>
+          <%= f.label "Email of your Health Professional" %>
+          <%= f.text_field :withings_api_key, :placeholder => "email address" %>
+        </div>
       </div>
     </div>
 
-    <div class="span2">
-      <div class="field">
-        <%= f.label "Withings User Id" %>
-        <%= f.text_field :withings_id, :placeholder => "User Id from Withings" %>
-      </div>
-      <div class="field">
-        <%= f.label "Withings API Key" %>
-        <%= f.text_field :withings_api_key, :placeholder => "Public Key from Withings" %>
-      </div>
-    </div>
-</div>
 
   <div class="well">
     <h2><em>Future Feature --- </em>Info on granting Withings access:</h2>
