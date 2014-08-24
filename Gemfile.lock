@@ -278,6 +278,9 @@ GEM
     warden (1.2.3)
       rack (>= 1.0)
     will_paginate (3.0.5)
+    withings-api (0.0.3)
+      json
+      oauth (~> 0.4.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -320,6 +323,7 @@ DEPENDENCIES
   rb-fsevent
   rolify
   rspec-rails (= 2.13.0)
+  ruby-hmac
   sass-rails (~> 4.0.0)
   sdoc
   simplificator-withings
@@ -328,3 +332,4 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn
   will_paginate
+  withings-api

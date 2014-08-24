@@ -52,27 +52,29 @@
       </div>
     </div>
 
+  <%- f.fields_for(:healthpros) do |ef| %>
     <div class="row">
       <h4>Health Professional Information:</h4>
       <div class="span4">
         <div class="field">
-          <%= f.label "First Name" %>
-          <%= f.text_field :withings_id, :placeholder => "Your Professional's 1st name" %>
-          <%= f.label "Last Name" %>
-          <%= f.text_field :withings_id, :placeholder => "Your Professional's last name" %>
-          <%= f.label "Title" %>
-          <%= f.text_field :withings_id, :placeholder => "Title" %>
+          <%= ef.label "First Name" %>
+          <%= ef.text_field :withings_id, :placeholder => "Your Professional's 1st name" %>
+          <%= ef.label "Last Name" %>
+          <%= ef.text_field :withings_id, :placeholder => "Your Professional's last name" %>
+          <%= ef.label "Title" %>
+          <%= ef.text_field :withings_id, :placeholder => "Title" %>
         </div>
       </div>
       <div class="span4">
         <div class="field">
-          <%= f.label "Organization" %>
-          <%= f.text_field :withings_id, :placeholder => "Your Professional's Organization" %>
-          <%= f.label "Email of your Health Professional" %>
-          <%= f.text_field :withings_api_key, :placeholder => "email address" %>
+          <%= ef.label "Organization" %>
+          <%= ef.text_field :withings_id, :placeholder => "Your Professional's Organization" %>
+          <%= ef.label "Email of your Health Professional" %>
+          <%= ef.text_field :withings_api_key, :placeholder => "email address" %>
         </div>
       </div>
     </div>
+  <% end %>
 
 
   <div class="well">

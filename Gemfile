@@ -65,6 +65,8 @@ gem 'gravtastic'
 gem 'rails_12factor'
 gem "omniauth-withings"
 gem "simplificator-withings"
+gem "withings-api"
+gem 'ruby-hmac'
 
 group :development, :test do
   gem "rspec-rails", "2.13.0"

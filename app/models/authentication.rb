@@ -8,6 +8,13 @@ belongs_to :user
      )
   end
 
+   def withings_client
+    client = Withings::Client.new(
+      :oauth_token => self.oauth_token,
+      :oauth_token_secret => self.oauth_token_secret
+     )
+  end
+
   def withings_user
       #withings_user = Withings::User.authenticate(self.uid, self.oauth_token, self.oauth_token_secret)
       withings_user = Withings::User.authenticate(self.uid, self.oauth_token, self.oauth_token_secret)
