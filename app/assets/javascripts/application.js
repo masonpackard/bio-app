@@ -3,6 +3,7 @@
 //= require turbolinks
 //= require bootstrap
 //= require facebook
+//= require animations
 //= require highcharts/highcharts                                                           
 //= require highcharts/highcharts-more                                                         
 //= require_tree .
