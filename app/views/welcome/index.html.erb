@@ -1,8 +1,10 @@
 <intro id="intro">
 	<div class="row-fluid">
 		<div class="hero-unit" id="main-hero">
-			<h1> Your Best Resource To </h1>
-			<h1>Better Health</h1>
+			<p>
+				<h1> Your Best Resource To </h1>
+				<h1>Better Health</h1>
+			</p>
 			<p> Learn how <strong><em>Bio App - Health Tracker <sup><small>&#8480;</small></sup></em></strong> shortens your recovery time.  Through increased insight and a responsive feedback cycle, you and your health will have a quicker rehabilitation. </p>
 		</div>
 	</div>
@@ -16,8 +18,8 @@
 		<div class="span7">
 			<h3>The Busted you.</h3>
 			<p>The doctor just stated you need a new knee.</p> 
-			<p>After weeks and weeks of pain, they finally decide that you need a full knee replacment.</p>
-			<p>The doctors have resolved to perform surgery and install the latest in knee technology.  After the operation is over they say that you should be "good as new."  It's just up to you to use your knee again.
+			<p>After weeks and weeks of pain, they finally decide that you need a full knee replacement.</p>
+			<p>The doctors have resolved to perform surgery and install the latest in knee technology.  After the operation is over they say that you should be "good as new."  It's just up to you to use your knee again, easy.
 			</p>
 		</div>
 	</div>
@@ -79,8 +81,10 @@
 			<p>It's easy to sign up and to gain vivid insight.  We are your best partner and platform to be running at full speed.</p>
 			<p>You can access our platform on the <em>web, your tablet, or even your smartphone.</em>  So, your activity, insight, notes and professional feedback are readily available... where ever you are. We are here for you.  Ready to begin your rapid recovery !
 			</p>
+			<% unless user_signed_in? %>
 			<p><%= link_to "Let's Get Started »", "#sign_up", "class" => "btn btn-primary btn-large", "data-toggle" => "modal" %>
 			</p>
+			<% end %>
 		</div>
 	</div>
 </section>
